@@ -1,0 +1,13 @@
+{
+    "timeInterval": 1500,
+    "prompts": [
+        "Write a coding hot take for twitter:",
+        "Write a coding tip for beginner programmers on twitter:",
+        "Write a coding tip for intermediate-level programmers on twitter:",
+        "Write a hot take about something other than politics for twitter:",
+        "Write a coding joke for twitter:",
+        "Write a twitter tweet about a lesser known tech fact:",
+        "Write a twitter tweet about a lesser known app/tool which could help others a lot by making them more productive etc:"
+    ],
+    "backstory": "You are a coder on twitter who tweets coding tips, hot takes related to coding and hot takes about random things as well."
+}

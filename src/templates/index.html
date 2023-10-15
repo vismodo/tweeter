@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="media/index.css">
+    <link rel="icon" type="image/png" href="/media/logo.png">
+    <title>Tweeter</title>
+</head>
+<body>
+    <script>
+        
+    </script>
+    {% for tweet in tweets %}
+    <div class="tweet" id="box{{ tweet[0] }}">{{tweet[1]}}
+        <br>
+        <div class="toolbar">
+            <button class="tool-button" id="yes{{ tweet[0] }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                  </svg>
+            </button>
+            <button class="tool-button"id="no{{ tweet[0] }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                  </svg>
+            </button>
+            <script>
+                window.addEventListener("load", ()=>{
+                    document.getElementById("no{{ tweet[0] }}").addEventListener("click", ()=>{
+                        if (confirm("Delete this draft?")){
+                        document.getElementById("box{{ tweet[0] }}").remove()
+                        const xhr = new XMLHttpRequest();
+                        xhr.open("GET", "./delete/{{ tweet[0] }}")
+                        xhr.send();}
+                    })
+                    document.getElementById("yes{{ tweet[0] }}").addEventListener("click", ()=>{
+                        if (confirm("Publish this draft to Twitter?")){
+                        document.getElementById("box{{ tweet[0] }}").remove()
+                        const xhr = new XMLHttpRequest();
+                        xhr.open("GET", "./tweet/{{ tweet[0] }}")
+                        xhr.send();}
+                    })
+                })
+            </script>
+        </div>
+        </div>
+        {% endfor %}
+    <button class="add-btn" id="addBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+          </svg>
+    </button>
+    <script>
+        window.addEventListener("load", ()=>{
+            const addBtn = document.getElementById("addBtn")
+            addBtn.addEventListener("click", ()=>{
+                addBtn.disabled=true;
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "./new")
+                xhr.send();
+                xhr.onload = () => {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                      window.location.reload()
+                    } else {
+                      alert(`Error: ${xhr.status}`);
+                    }
+                  };
+            })
+        })
+    </script>
+    </body>
+</html>

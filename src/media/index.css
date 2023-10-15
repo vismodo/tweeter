@@ -1,0 +1,66 @@
+body {
+    background-color:rgb(0, 0, 0);
+    margin: 10px 30% 0px 30%;
+    font-size:15px;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(209, 209, 209);
+}
+
+.tweet {
+    min-width:250px;
+    width:calc(100% - 40px);
+    border-radius: 10px;
+    padding:20px;
+    background-color: rgb(21, 21, 21);
+    border:1px solid rgb(71, 71, 71);
+    margin-bottom:20px;
+}
+.toolbar{
+    height:30px;
+    width:100%;
+    text-align:center;
+    padding-top:10px;
+}
+
+.tool-button {
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    outline:none;
+    border:none;
+    background-color: inherit;
+    transition: 0.2s ease-in-out;
+}
+.tool-button:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.add-btn {
+    color:white;
+    padding:20px;
+    border-radius:20%;
+    outline:none;
+    border:1px solid rgb(85, 85, 85);
+    background-color: rgb(39, 39, 39);
+    position:fixed;
+    bottom:30px;
+    right:20%;
+    display:flex;
+    transition: 0.1s ease-in-out;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background-color: rgb(48, 48, 48);
+}
+
+@media only screen and (max-width: 600px){
+    body {
+        margin:10px 20px 0px 20px;
+    }
+
+    .add-btn {
+        right:30px;
+    }
+}
