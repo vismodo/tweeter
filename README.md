@@ -2,7 +2,7 @@
 
 ![logo](https://i.ibb.co/PZ0kd28/logo.png)
 
-Tweeter is a web app that uses AI to create tweet drafts, which you can post in a single click!
+Tweeter is a web app that uses AI [Llama 2 70b](https://huggingface.co/spaces/ysharma/Explore_llamav2_with_TGI) to create tweet drafts, which you can post in a single click!
 
 ## Screenshots
 ![screenshot1](https://i.ibb.co/F68H5j3/Screenshot-2023-10-15-101047.png)
@@ -53,5 +53,6 @@ Tweeter is a web app that uses AI to create tweet drafts, which you can post in 
 
 ## Credits
 
-[@vismodo](https://github.com/vismodo)
+- [@vismodo](https://github.com/vismodo)
 
+- [Llama 2 70b](https://huggingface.co/spaces/ysharma/Explore_llamav2_with_TGI)
