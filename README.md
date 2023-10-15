@@ -4,6 +4,9 @@
 
 Tweeter is a web app that uses AI to create tweet drafts, which you can post in a single click!
 
+## Screenshots
+![screenshot1](https://i.ibb.co/F68H5j3/Screenshot-2023-10-15-101047.png)
+
 ## Installation & Setup
 1. Clone the repository by running the command below or clicking [here](https://github.com/vismodo/tweeter/archive/refs/heads/main.zip)
     ```bash
@@ -44,10 +47,11 @@ Tweeter is a web app that uses AI to create tweet drafts, which you can post in 
     $ python thinker.py # Run the script
     ```
 
+## FAQ
+### Can I run this on a Raspberry Pi?
+> Yes, you can. Just use `--host 0.0.0.0` when running the flask server.
+
 ## Credits
 
 [@vismodo](https://github.com/vismodo)
 
-## FAQ
-### Can I run this on a Raspberry Pi?
-> Yes, you can. Just use `--host 0.0.0.0` when running the flask server.
