@@ -1,5 +1,5 @@
 {
-    "timeInterval": 1500,
+    "timeInterval": 1500, // How long thinker.py should wait before generating a new draft
     "prompts": [
         "Write a coding hot take for twitter:",
         "Write a coding tip for beginner programmers on twitter:",
