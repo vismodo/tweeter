@@ -1,6 +1,6 @@
 # Tweeter
 
-![logo](./src/media/logo.png)
+![logo](https://i.ibb.co/PZ0kd28/logo.png)
 
 Tweeter is a web app that uses AI to create tweet drafts, which you can post in a single click!
 
